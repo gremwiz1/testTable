@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "Data": "2022-09-24",
+        "Name": "good1",
+        "quantity": 3,
+        "distance": 5
+    },
+    {
+        "id": 2,
+        "Data": "2022-09-24",
+        "Name": "good2",
+        "quantity": 4,
+        "distance": 7
+    },
+    {
+        "id": 3,
+        "Data": "2022-09-24",
+        "Name": "good3",
+        "quantity": 7,
+        "distance": 11
+    },
+    {
+        "id": 4,
+        "Data": "2022-09-24",
+        "Name": "good4",
+        "quantity": 2,
+        "distance": 9
+    },
+    {
+        "id": 5,
+        "Data": "2022-09-24",
+        "Name": "good5",
+        "quantity": 4,
+        "distance": 8
+    },
+    {
+        "id": 6,
+        "Data": "2022-09-24",
+        "Name": "good6",
+        "quantity": 2,
+        "distance": 13
+    },
+    {
+        "id": 7,
+        "Data": "2022-09-24",
+        "Name": "good7",
+        "quantity": 9,
+        "distance": 15
+    },
+    {
+        "id": 8,
+        "Data": "2022-09-24",
+        "Name": "good8",
+        "quantity": 3,
+        "distance": 15
+    },
+    {
+        "id": 9,
+        "Data": "2022-09-24",
+        "Name": "good9",
+        "quantity": 13,
+        "distance": 5
+    },
+    {
+        "id": 10,
+        "Data": "2022-09-24",
+        "Name": "good10",
+        "quantity": 33,
+        "distance": 35
+    },
+    {
+        "id": 11,
+        "Data": "2022-09-24",
+        "Name": "good11",
+        "quantity": 3,
+        "distance": 5
+    },
+    {
+        "id": 12,
+        "Data": "2022-09-24",
+        "Name": "good12",
+        "quantity": 4,
+        "distance": 15
+    }
+]
