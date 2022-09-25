@@ -1,0 +1,32 @@
+.page-number-block {
+  display: flex;
+  margin-right: auto;
+}
+.page-number-block__button {
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.page-number-block__button:hover {
+  opacity: 0.7;
+}
+.table__content {
+  display: flex;
+  flex-direction: column;
+}
+.table {
+  display: flex;
+  flex-direction: column;
+}
+.table__head {
+  display: flex;
+}
+.table__head_cell {
+  display: flex;
+  width: 150px;
+  margin: 10px;
+  min-height: 35px;
+  text-align: left;
+  align-items: center;
+}

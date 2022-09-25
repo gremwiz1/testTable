@@ -3,23 +3,12 @@ import DataTableFilter from "../data-table-filter/data-table-filter";
 import DataTable from "../data-table/data-table";
 import * as appApi from "../../utils/api";
 import "./app.css";
+import { IFilter, ITableData } from "../../utils/types";
 
-interface IFilter {
-  column: "Name" | "quantity" | "distance" | "none";
-  choice: "содержит" | "больше" | "меньше" | "равно" | "";
-  valueFiltration: number | string;
-}
-interface ITableData {
-  id: string;
-  Data: string;
-  Name: string;
-  quantity: number;
-  distance: number;
-}
 function App() {
   const [tableData, setTableData] = useState<ITableData[]>([]);
   const [filter, setFilter] = useState<IFilter>({
-    column: "none",
+    column: "",
     choice: "",
     valueFiltration: "",
   });
@@ -36,7 +25,7 @@ function App() {
   }, []);
   const sortedAndSearchedTableData = useMemo(() => {
     if (
-      filter.column === "none" ||
+      filter.column === "" ||
       filter.choice === "" ||
       filter.valueFiltration === ""
     ) {
@@ -60,6 +49,7 @@ function App() {
     if (filter.choice === "меньше") {
       return tableData.filter((item) => item[field] < filter.valueFiltration);
     }
+    return tableData;
   }, [filter, tableData]);
   return (
     <div className="app">
