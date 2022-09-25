@@ -4,6 +4,7 @@ import DataTable from "../data-table/data-table";
 import * as appApi from "../../utils/api";
 import "./app.css";
 import { IFilter, ITableData } from "../../utils/types";
+import { getDataOnRussian } from "../../utils/helpers";
 
 function App() {
   const [tableData, setTableData] = useState<ITableData[]>([]);
@@ -16,7 +17,10 @@ function App() {
   useEffect(() => {
     appApi
       .getContent()
-      .then((data) => {
+      .then((data: ITableData[]) => {
+        data.forEach((item) => {
+          item.Data = getDataOnRussian(item.Data);
+        });
         setTableData(data);
       })
       .catch((err) => {

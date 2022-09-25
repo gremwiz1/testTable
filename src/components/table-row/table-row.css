@@ -3,7 +3,7 @@
 }
 .table-row__cell {
   display: flex;
-  width: 150px;
+  width: 220px;
   margin: 10px;
   min-height: 35px;
   text-align: left;
