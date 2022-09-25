@@ -41,7 +41,9 @@ function App() {
       );
     }
     if (filter.choice === "равно") {
-      return tableData.filter((item) => item[field] === filter.valueFiltration);
+      return tableData.filter(
+        (item) => item[field].toString() === filter.valueFiltration.toString()
+      );
     }
     if (filter.choice === "больше") {
       return tableData.filter((item) => item[field] > filter.valueFiltration);
