@@ -8,8 +8,8 @@ interface ITableRow {
 const TableRow: FC<ITableRow> = ({ rowData }) => {
   return (
     <div className="table-row">
-      <div className="table-row__cell">{rowData.Data}</div>
-      <div className="table-row__cell">{rowData.Name}</div>
+      <div className="table-row__cell">{rowData.data}</div>
+      <div className="table-row__cell">{rowData.name}</div>
       <div className="table-row__cell">{rowData.quantity}</div>
       <div className="table-row__cell">{rowData.distance}</div>
     </div>

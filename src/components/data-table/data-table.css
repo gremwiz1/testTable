@@ -1,5 +1,6 @@
 .page-number-block {
   display: flex;
+  margin-left: 10px;
   margin-right: auto;
 }
 .page-number-block__button {

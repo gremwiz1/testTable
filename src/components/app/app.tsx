@@ -8,6 +8,7 @@ import { getDataOnRussian } from "../../utils/helpers";
 
 function App() {
   const [tableData, setTableData] = useState<ITableData[]>([]);
+  const [isLoading, setIsLoading] = React.useState(false);
   const [filter, setFilter] = useState<IFilter>({
     column: "",
     choice: "",
@@ -19,9 +20,10 @@ function App() {
       .getContent()
       .then((data: ITableData[]) => {
         data.forEach((item) => {
-          item.Data = getDataOnRussian(item.Data);
+          item.data = getDataOnRussian(item.data);
         });
         setTableData(data);
+        setIsLoading(true);
       })
       .catch((err) => {
         console.error(err);
@@ -57,11 +59,13 @@ function App() {
     }
     return tableData;
   }, [filter, tableData]);
-  return (
+  return isLoading ? (
     <div className="app">
       <DataTableFilter filter={filter} setFilter={setFilter} />
       <DataTable tableData={sortedAndSearchedTableData} pageSize={10} />
     </div>
+  ) : (
+    <div>Грузится...</div>
   );
 }
 export default App;

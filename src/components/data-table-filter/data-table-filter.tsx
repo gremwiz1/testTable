@@ -17,7 +17,7 @@ const DataTableFilter: FC<IDataTableFilter> = ({ filter, setFilter }) => {
         }
         defaultValue="Сортировка по"
         options={[
-          { value: "Name", name: "По названию" },
+          { value: "name", name: "По названию" },
           { value: "quantity", name: "По количеству" },
           { value: "distance", name: "По дистанции" },
         ]}
